@@ -32,8 +32,8 @@ jobs:
         run: newman run "Restful Booker BVT.postman_collection.json" -e Production.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html || true
 
     # Upload the contents of Test Results directory to workspace
-      - name: Output the run Details
-        uses: actions/upload-artifact@v2
-        with: 
-          name: RunReports
-          path: testResults
+    - name: Upload Artifact
+  uses: actions/upload-artifact@v3
+  with:
+    name: artifak-anda
+    path: path/ke/artifak
